@@ -42,7 +42,7 @@ class WidgetsLessonElevenScreen extends StatelessWidget {
   }
 }
 
-class ColorfullContainerWidget extends StatelessWidget {
+class ColorfullContainerWidget extends StatefulWidget {
   const ColorfullContainerWidget({
     required this.cardWidth,
     required this.cardHeight,
@@ -57,37 +57,79 @@ class ColorfullContainerWidget extends StatelessWidget {
   final Alignment alignment;
 
   @override
+  State<ColorfullContainerWidget> createState() =>
+      _ColorfullContainerWidgetState();
+}
+
+class _ColorfullContainerWidgetState extends State<ColorfullContainerWidget> {
+  bool selected = false;
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      width: cardWidth,
-      height: cardHeight,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Align(
-          alignment: alignment,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: const [
-              Icon(Icons.star, color: Colors.yellow),
-              SizedBox(width: 10),
-              Text(
-                'Привіт, Flutter!',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          selected = !selected;
+        });
+      },
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+        width: widget.cardWidth,
+        height: widget.cardHeight,
+        decoration: BoxDecoration(
+          color: selected
+              ? Color.lerp(widget.color, Colors.black, 0.2)
+              : widget.color,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: selected
+              ? [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.3),
+                    blurRadius: 10,
+                    offset: const Offset(0, 5),
+                  ),
+                ]
+              : [],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Align(
+            alignment: widget.alignment,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                StarIconWidget(selected: selected),
+                SizedBox(width: 10),
+                Text(
+                  'Привіт, Flutter!',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              SizedBox(width: 10),
-              Icon(Icons.star, color: Colors.yellow),
-            ],
+                SizedBox(width: 10),
+                StarIconWidget(selected: selected),
+              ],
+            ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class StarIconWidget extends StatelessWidget {
+  const StarIconWidget({required this.selected, super.key});
+
+  final bool selected;
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      selected ? Icons.star : Icons.star_border,
+      color: Colors.yellow,
     );
   }
 }

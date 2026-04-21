@@ -11,24 +11,30 @@ class WidgetsLessonElevenScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           spacing: 8,
           children: const [
-            ColorfullContainerWidget(
-              cardWidth: cardWidth,
-              cardHeight: cardHeight,
-              color: Colors.blue,
+            Flexible(
+              flex: 2,
+              child: ColorfullContainerWidget(
+                cardWidth: cardWidth,
+                cardHeight: null,
+                color: Colors.blue,
+                alignment: Alignment.topLeft,
+              ),
             ),
             ColorfullContainerWidget(
               cardWidth: cardWidth,
               cardHeight: cardHeight,
               color: Colors.green,
+              alignment: Alignment.center,
             ),
             ColorfullContainerWidget(
               cardWidth: cardWidth,
               cardHeight: cardHeight,
               color: Colors.red,
+              alignment: Alignment.bottomRight,
             ),
+            Spacer(),
           ],
         ),
       ),
@@ -41,12 +47,14 @@ class ColorfullContainerWidget extends StatelessWidget {
     required this.cardWidth,
     required this.cardHeight,
     required this.color,
+    required this.alignment,
     super.key,
   });
 
   final double cardWidth;
-  final double cardHeight;
+  final double? cardHeight;
   final Color color;
+  final Alignment alignment;
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +68,7 @@ class ColorfullContainerWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Align(
-          alignment: Alignment.bottomRight,
+          alignment: alignment,
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: const [

@@ -17,7 +17,6 @@ class WidgetsLessonElevenScreen extends StatelessWidget {
               flex: 2,
               child: ColorfullContainerWidget(
                 cardWidth: cardWidth,
-                cardHeight: null,
                 color: Colors.blue,
                 alignment: Alignment.topLeft,
               ),
@@ -45,9 +44,9 @@ class WidgetsLessonElevenScreen extends StatelessWidget {
 class ColorfullContainerWidget extends StatefulWidget {
   const ColorfullContainerWidget({
     required this.cardWidth,
-    required this.cardHeight,
     required this.color,
     required this.alignment,
+    this.cardHeight,
     super.key,
   });
 

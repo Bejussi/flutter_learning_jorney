@@ -12,6 +12,9 @@ class AppColors {
   static const unselectedInputBorderColor = Color.fromRGBO(0, 0, 0, 0.24);
   static const shadowColor = Color.fromRGBO(0, 0, 0, 0.3);
 
+  static const appBarGradientColorRight = Color(0xFFff0f7b);
+  static const appBarGradientColorLeft = Color(0xFFf89b29);
+
   static const buttonTextColor = Colors.white;
   static const ratingServiceTextColor = Color.fromRGBO(0, 0, 0, 0.87);
   static const inputLabelTextColor = Color.fromRGBO(0, 0, 0, 0.54);

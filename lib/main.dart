@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_jorney/theme/app_colors.dart';
+import 'package:flutter_learning_jorney/theme/app_text_styles.dart';
 import 'package:flutter_learning_jorney/widgets_main_screen.dart';
 
 void main() {
@@ -24,8 +26,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Lab'),
-        backgroundColor: Colors.blue.shade100,
+        title: const Text('Flutter Lab', style: AppTextStyles.title),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                AppColors.appBarGradientColorRight,
+                AppColors.appBarGradientColorLeft,
+              ],
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -57,7 +70,9 @@ class FeatureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2,
+      elevation: 8,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(120)),
+      shadowColor: AppColors.appBarGradientColorLeft,
       child: InkWell(
         onTap: onTap,
         child: Padding(
@@ -65,17 +80,11 @@ class FeatureCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
+              Text(title, style: AppTextStyles.subtitle),
               Icon(
                 Icons.arrow_forward_ios,
                 size: 16,
-                color: Colors.grey.shade600,
+                color: AppColors.appBarGradientColorRight,
               ),
             ],
           ),

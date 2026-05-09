@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_jorney/lesson_12/theme/app_colors.dart';
+import 'package:flutter_learning_jorney/theme/app_colors.dart';
 import 'package:flutter_learning_jorney/lesson_12/widgets/clickable_icon_widget_shadowed.dart';
 
 class RatingWidget extends StatefulWidget {

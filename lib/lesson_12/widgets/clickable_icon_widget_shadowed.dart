@@ -22,7 +22,6 @@ class ClickableIconShadowedWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isUnselected = !selected;
     final asset = selected ? fullIcon : emptyIcon;
 
     return Stack(
@@ -38,7 +37,7 @@ class ClickableIconShadowedWidget extends StatelessWidget {
                 asset,
                 width: width,
                 height: height,
-                colorFilter: isUnselected
+                colorFilter: !selected
                     ? ColorFilter.mode(AppColors.shadowColor, BlendMode.srcIn)
                     : null,
               ),

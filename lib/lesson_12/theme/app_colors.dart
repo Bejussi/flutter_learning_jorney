@@ -5,16 +5,14 @@ class AppColors {
   static const barColor = Colors.white;
   static const selectedRatingColor = Color(0xFF2358D1);
   static const activeButtonColor = Color(0xFF1135BA);
-  static final unselectedRatingColor = Colors.black.withValues(alpha: 0.04);
-  static final borderRatingColor = Colors.black.withValues(alpha: 0.04);
-  static final backgroundRatingColor = Color(0xFFF6F8FD);
+  static const unselectedRatingColor = Color.fromRGBO(0, 0, 0, 0.04);
+  static const borderRatingColor = Color.fromRGBO(0, 0, 0, 0.04);
+  static const backgroundRatingColor = Color(0xFFF6F8FD);
   static const selectedInputBorderColor = Color(0xFF2358D1);
-  static final unselectedInputBorderColor = Colors.black.withValues(
-    alpha: 0.24,
-  );
-  static final shadowColor = Colors.black.withValues(alpha: 0.3);
+  static const unselectedInputBorderColor = Color.fromRGBO(0, 0, 0, 0.24);
+  static const shadowColor = Color.fromRGBO(0, 0, 0, 0.3);
 
   static const buttonTextColor = Colors.white;
-  static final ratingServiceTextColor = Colors.black.withValues(alpha: 0.87);
-  static final inputLabelTextColor = Colors.black.withValues(alpha: 0.54);
+  static const ratingServiceTextColor = Color.fromRGBO(0, 0, 0, 0.87);
+  static const inputLabelTextColor = Color.fromRGBO(0, 0, 0, 0.54);
 }

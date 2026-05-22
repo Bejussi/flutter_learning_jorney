@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_jorney/router/app_route_paths.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_learning_jorney/lesson_11/homework_11_screen.dart';
 import 'package:flutter_learning_jorney/lesson_12/homework_12_screen.dart';
@@ -37,7 +38,7 @@ class WidgetsScreen extends StatelessWidget {
               description:
                   'Container, SizedBox, Padding, Align, Center, Text, Row, '
                   'Column, Expanded, Buttons, Scroll',
-              onTap: () => context.go('widgets/lesson-eleven'),
+              onTap: () => context.goNamed(AppRoutePaths.lessonEleven),
             ),
 
             NavigationCard(
@@ -46,7 +47,7 @@ class WidgetsScreen extends StatelessWidget {
                   'Custom Widgets, Stateless vs Stateful Widgets, '
                   'Gesture Detector & InkWel, '
                   'TextFields & TextFormFields',
-              onTap: () => context.go('widgets/lesson-twelve'),
+              onTap: () => context.goNamed(AppRoutePaths.lessonTwelve),
             ),
 
             NavigationCard(

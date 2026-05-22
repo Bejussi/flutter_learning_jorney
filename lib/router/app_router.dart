@@ -13,14 +13,17 @@ final appRouter = GoRouter(
       builder: (context, state) => HomeScreen(),
       routes: [
         GoRoute(
+          name: AppRoutePaths.widgets,
           path: AppRoutePaths.widgets,
           builder: (context, state) => WidgetsScreen(),
           routes: [
             GoRoute(
+              name: AppRoutePaths.lessonEleven,
               path: AppRoutePaths.lessonEleven,
               builder: (context, state) => WidgetsLessonElevenScreen(),
             ),
             GoRoute(
+              name: AppRoutePaths.lessonTwelve,
               path: AppRoutePaths.lessonTwelve,
               builder: (context, state) => LessonTwelveScreen(),
             ),

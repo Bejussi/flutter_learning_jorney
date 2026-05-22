@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning_jorney/feature_card.dart';
+import 'package:flutter_learning_jorney/router/app_route_paths.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,7 +18,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            FeatureCard(title: 'Widgets', onTap: () => context.go('/widgets')),
+            FeatureCard(
+              title: 'Widgets',
+              onTap: () => context.goNamed(AppRoutePaths.widgets),
+            ),
           ],
         ),
       ),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:flutter_learning_jorney/lesson_11/homework_11_screen.dart';
-import 'package:flutter_learning_jorney/lesson_12/homework_12_screen.dart';
 import 'package:flutter_learning_jorney/lesson_13/lesson_13_screen.dart';
 import 'package:flutter_learning_jorney/theme/app_colors.dart';
 import 'package:flutter_learning_jorney/theme/app_text_styles.dart';
+import 'package:go_router/go_router.dart';
 
 class WidgetsScreen extends StatelessWidget {
   const WidgetsScreen({super.key});

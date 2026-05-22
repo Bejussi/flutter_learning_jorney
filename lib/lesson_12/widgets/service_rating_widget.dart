@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_jorney/theme/app_colors.dart';
-import 'package:flutter_learning_jorney/theme/app_text_styles.dart';
 import 'package:flutter_learning_jorney/lesson_12/utils/rating_type.dart';
 import 'package:flutter_learning_jorney/lesson_12/widgets/rating_button.dart';
+import 'package:flutter_learning_jorney/theme/app_colors.dart';
+import 'package:flutter_learning_jorney/theme/app_text_styles.dart';
 
 class ServiceRatingWidget extends StatefulWidget {
   const ServiceRatingWidget({required this.title, super.key});

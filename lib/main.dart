@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_jorney/router/app_router.dart';
 import 'package:flutter_learning_jorney/theme/app_colors.dart';
 import 'package:flutter_learning_jorney/theme/app_text_styles.dart';
 import 'package:flutter_learning_jorney/widgets_main_screen.dart';
@@ -12,7 +13,8 @@ class FlutterWidgetsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );

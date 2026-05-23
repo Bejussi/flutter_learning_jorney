@@ -26,6 +26,10 @@ class HomeScreen extends StatelessWidget {
               title: 'HW-18. State managment',
               onTap: () => context.goNamed(AppRoutePaths.lessonEighteen),
             ),
+            FeatureCard(
+              title: 'HW-19. Rate screen',
+              onTap: () => context.goNamed(AppRoutePaths.lessonNineteen),
+            ),
           ],
         ),
       ),

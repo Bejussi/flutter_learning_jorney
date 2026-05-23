@@ -8,6 +8,13 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
   );
 
+  static const titleRate = TextStyle(
+    fontSize: 20,
+    fontFamily: 'SilpoText',
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+  );
+
   static const subtitle = TextStyle(
     fontSize: 18,
     fontFamily: 'SilpoText',

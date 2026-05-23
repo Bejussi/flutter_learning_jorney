@@ -7,6 +7,7 @@ import 'package:flutter_learning_jorney/lesson_18/homework_%D1%81ubit/homework_c
 import 'package:flutter_learning_jorney/lesson_18/homework_bloc/bloc/counter_bloc.dart';
 import 'package:flutter_learning_jorney/lesson_18/homework_bloc/homework_bloc_screen.dart';
 import 'package:flutter_learning_jorney/lesson_18/state_managment_base_screen.dart';
+import 'package:flutter_learning_jorney/lesson_19/screens/rate_app_screen.dart';
 import 'package:flutter_learning_jorney/router/app_route_paths.dart';
 import 'package:flutter_learning_jorney/widgets_main_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -62,6 +63,11 @@ final appRouter = GoRouter(
               ),
             ),
           ],
+        ),
+        GoRoute(
+          name: AppRoutePaths.lessonNineteen,
+          path: AppRoutePaths.lessonNineteen,
+          builder: (context, state) => RateAppScreen(),
         ),
       ],
     ),

@@ -28,9 +28,7 @@ class RateAppScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter Lab', style: AppTextStyles.titleRate),
           backgroundColor: AppColors.appBarColor,
-          iconTheme: const IconThemeData(
-            color: Colors.white, // Sets back button color
-          ),
+          iconTheme: const IconThemeData(color: Colors.white),
         ),
         backgroundColor: AppColors.backgroundRateColor,
         body: BlocListener<RateCubit, RateAppState>(
@@ -38,10 +36,42 @@ class RateAppScreen extends StatelessWidget {
             return current.status == RateAppStatus.success;
           },
           listener: (context, state) {
-            context.pop();
+            context.pop(true);
             ScaffoldMessenger.of(context).showSnackBar(_showCustomSnackBar());
           },
-          child: RatingContentCard(maxRating: maxRating),
+          child: BlocBuilder<RateCubit, RateAppState>(
+            builder: (context, state) {
+              return RatingContentCard(
+                maxRating: maxRating,
+
+                isSuccess: state.status == RateAppStatus.success,
+
+                isLoading: state.status == RateAppStatus.loading,
+
+                selectedRating: state.selectedRating,
+
+                canSubmit:
+                    state.selectedRating > 0 &&
+                    state.status != RateAppStatus.loading,
+
+                onRatingTap: (rating) {
+                  context.read<RateCubit>().setRating(rating);
+                },
+
+                onSubmit: () {
+                  context.read<RateCubit>().submitRating();
+                },
+
+                onReset: () {
+                  context.read<RateCubit>().resetRating();
+                },
+
+                onRateAgain: () {
+                  context.read<RateCubit>().resetRating();
+                },
+              );
+            },
+          ),
         ),
       ),
     );

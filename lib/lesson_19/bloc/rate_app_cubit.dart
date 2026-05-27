@@ -6,7 +6,7 @@ class RateCubit extends Cubit<RateAppState> {
   RateCubit() : super(RateAppState());
 
   void setRating(int rating) {
-    emit(state.copyWith(selectedRating: rating));
+    emit(state.copyWith(selectedRating: rating, status: RateAppStatus.initial));
   }
 
   void resetRating() {

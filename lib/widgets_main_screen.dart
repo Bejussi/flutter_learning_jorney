@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_jorney/lesson_13/lesson_13_screen.dart';
+import 'package:flutter_learning_jorney/router/app_route_paths.dart';
 import 'package:flutter_learning_jorney/theme/app_colors.dart';
 import 'package:flutter_learning_jorney/theme/app_text_styles.dart';
 import 'package:go_router/go_router.dart';
@@ -35,7 +35,7 @@ class WidgetsScreen extends StatelessWidget {
               description:
                   'Container, SizedBox, Padding, Align, Center, Text, Row, '
                   'Column, Expanded, Buttons, Scroll',
-              onTap: () => context.go('widgets/lesson-eleven'),
+              onTap: () => context.goNamed(AppRoutePaths.lessonEleven),
             ),
 
             NavigationCard(
@@ -44,18 +44,13 @@ class WidgetsScreen extends StatelessWidget {
                   'Custom Widgets, Stateless vs Stateful Widgets, '
                   'Gesture Detector & InkWel, '
                   'TextFields & TextFormFields',
-              onTap: () => context.go('widgets/lesson-twelve'),
+              onTap: () => context.goNamed(AppRoutePaths.lessonTwelve),
             ),
 
             NavigationCard(
               title: 'Homework: Widgets Part 3',
               description: 'Interaction of widgets and layout ',
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute<Widget>(
-                  builder: (context) => const WidgetConstrainsTrainingScreen(),
-                ),
-              ),
+              onTap: () => context.goNamed(AppRoutePaths.lessonThirteen),
             ),
           ],
         ),

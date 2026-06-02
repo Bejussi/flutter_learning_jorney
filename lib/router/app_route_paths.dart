@@ -7,4 +7,5 @@ class AppRoutePaths {
   static const String lessonNineteen = 'lessonNineteen';
   static const String bloc = 'bloc';
   static const String cubit = 'cubit';
+  static const String explicit = 'explicitAnimations';
 }

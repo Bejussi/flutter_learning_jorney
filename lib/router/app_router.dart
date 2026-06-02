@@ -8,6 +8,7 @@ import 'package:flutter_learning_jorney/lesson_18/homework_bloc/bloc/counter_blo
 import 'package:flutter_learning_jorney/lesson_18/homework_bloc/homework_bloc_screen.dart';
 import 'package:flutter_learning_jorney/lesson_18/state_managment_base_screen.dart';
 import 'package:flutter_learning_jorney/lesson_19/screens/rate_app_screen.dart';
+import 'package:flutter_learning_jorney/lesson_21/explicit_animation_screen.dart';
 import 'package:flutter_learning_jorney/router/app_route_paths.dart';
 import 'package:flutter_learning_jorney/widgets_main_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -68,6 +69,11 @@ final appRouter = GoRouter(
           name: AppRoutePaths.lessonNineteen,
           path: AppRoutePaths.lessonNineteen,
           builder: (context, state) => RateAppScreen(),
+        ),
+        GoRoute(
+          name: AppRoutePaths.explicit,
+          path: AppRoutePaths.explicit,
+          builder: (context, state) => ExplicitAnimationScreen(),
         ),
       ],
     ),

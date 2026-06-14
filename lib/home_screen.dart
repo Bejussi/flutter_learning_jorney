@@ -34,6 +34,10 @@ class HomeScreen extends StatelessWidget {
               title: 'HW-21. Explicit Animations',
               onTap: () => context.goNamed(AppRoutePaths.explicit),
             ),
+            FeatureCard(
+              title: 'HW-22. Error Handling',
+              onTap: () => context.goNamed(AppRoutePaths.errorhandling),
+            ),
           ],
         ),
       ),

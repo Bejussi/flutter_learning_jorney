@@ -8,4 +8,7 @@ class AppRoutePaths {
   static const String bloc = 'bloc';
   static const String cubit = 'cubit';
   static const String explicit = 'explicitAnimations';
+  static const String productsPageExample = 'productsPageExample';
+  static const String userProfileHomework = 'userProfileHomework';
+  static const String errorhandling = 'errorhandling';
 }

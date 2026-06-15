@@ -11,4 +11,5 @@ class AppRoutePaths {
   static const String productsPageExample = 'productsPageExample';
   static const String userProfileHomework = 'userProfileHomework';
   static const String errorhandling = 'errorhandling';
+  static const String chequeJson = 'chequeJson';
 }

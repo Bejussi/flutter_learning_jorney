@@ -18,6 +18,7 @@ import 'package:flutter_learning_jorney/lesson_22/error_handling/error_handling_
 import 'package:flutter_learning_jorney/lesson_22/error_handling/presentation/cubit/products_cubit.dart';
 import 'package:flutter_learning_jorney/lesson_22/error_handling/presentation/ui/screens/error_handling_main_screen.dart';
 import 'package:flutter_learning_jorney/lesson_22/error_handling/presentation/ui/screens/products_page_example.dart';
+import 'package:flutter_learning_jorney/lesson_25/presentation/cheque_screen.dart';
 import 'package:flutter_learning_jorney/router/app_route_paths.dart';
 import 'package:flutter_learning_jorney/widgets_main_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -111,6 +112,11 @@ final appRouter = GoRouter(
               ),
             ),
           ],
+        ),
+        GoRoute(
+          name: AppRoutePaths.chequeJson,
+          path: AppRoutePaths.chequeJson,
+          builder: (context, state) => ChequeScreen(),
         ),
       ],
     ),

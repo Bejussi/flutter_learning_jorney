@@ -38,6 +38,10 @@ class HomeScreen extends StatelessWidget {
               title: 'HW-22. Error Handling',
               onTap: () => context.goNamed(AppRoutePaths.errorhandling),
             ),
+            FeatureCard(
+              title: 'HW-25. REST API, JSON',
+              onTap: () => context.goNamed(AppRoutePaths.chequeJson),
+            ),
           ],
         ),
       ),
